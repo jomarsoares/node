@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tasks</title>
+    </head>
+    <body>
+        <h1>Editar task</h1>
+        <form action="/edit" method="POST">
+            <input name="id" type="hidden" value="<%= content.task._id %>" />
+            <label for="title">Title</label>
+            <br/>
+            <input name="title" type="text" value="<%= content.task.title %>"/> 
+            <br/>
+            <br/>
+            <label for="description">Description</label>
+            <br/>
+            <input name="description" type="text" value="<%= content.task.description %>"/>
+            <br/>
+            <br/>
+            <button type="submit">Enviar</button>
+        </form>
+        
+    </body>
+</html>

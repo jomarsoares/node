@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tasks</title>
+    </head>
+    <body>
+        <h1><%= content.task.title %></h1>
+        <p><%= content.task.description %></p>
+        <br>
+        <a href="/edit/<%= content.task._id %>"><button>Editar</button></a>
+        <form action="/remove" method="POST">
+            <input name="id" type="hidden" value="<%= content.task._id %>"/>
+            <br/>
+            <button type="submit">Remover</button>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Exemplo</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Mensagem recebida da API: <%message%></h1>
+    </body>
+ 
+</html>

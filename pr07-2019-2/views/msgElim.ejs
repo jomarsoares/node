@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <% if (arqelim !== "") { %>
+            <h2> O arquivo <%= arqelim %> foi eliminado! </h2>
+        <% } else {%>  
+            <h2> Como você não confirmou a exclusão, NENHUM arquivo foi eliminado!!!" </h2>
+        <% } %>
+        <p> <a href="http://localhost:3000/arqs">Listar arquivos do servidor.</a></p>
+        <p> <a href="http://localhost:3000/"">Fazer upload de novos arquivos.</a> </p>
+    </body> 
+</html>

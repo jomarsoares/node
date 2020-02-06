@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Carga de conteúdo via JS</title>
+	<link id="style" rel="stylesheet" type="text/css" href="css/tst2.css">
+</head>
+
+<body>
+	<h1> Conteúdo carregado via JS USANDO AJAX</h1>
+	
+	<h2>Com XMLHttpRequest fazendo um split com o caracter #</h2>
+	<div id="demo">demo </div>
+
+	<h2>Usando fetch e dados no formato JSON</h2>
+	<div id="demo2">demo2</div>
+
+	<script>
+		function arrToOl(response){
+		  var arr = response.split("#");
+		  str = "<ol>"
+		  console.log("tam de arr "+arr.length);
+		  for (i=0; i < arr.length; i++)
+			 str += "<li>" + arr[i] + "</li>";
+		  str+="</ol>"
+		  return str;  
+		}
+
+		function loadDoc(url,id) {
+		  console.log("ENTREI 1");	
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  console.log(this.responseText);		
+			  document.getElementById(id).innerHTML = arrToOl(this.responseText);
+			}
+		  };
+		  xhttp.open("GET", url, true);
+		  xhttp.send();
+		}
+
+		function loadDoc2(url, id) {
+			fetch(url)
+  			.then(response => {
+    			response.json().then( (data) => {
+					document.getElementById(id).innerHTML = arrToOl2(data);  
+   			 	});
+  			}).catch(err => {
+    			console.error('Failed retrieving information', err);
+  			});
+		}
+
+		function arrToOl2(response){
+		  	lista = response.lista;
+		  	console.log("tam de arr JSON: "+ lista.length);
+		 
+		  	str = "<h3>"+response.nome+"</h3> <ol>";
+		  	for (i=0; i < lista.length; i++)
+		   		str += "<li>" + lista[i] + "</li>";
+		  	str+="</ol>";
+		  	return str;  
+		}
+
+		loadDoc("data/doc.txt","demo");
+		loadDoc2("data/doc2.json","demo2");
+	</script>
+</body>
+</html>

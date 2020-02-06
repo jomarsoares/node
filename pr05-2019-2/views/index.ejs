@@ -1,0 +1,25 @@
+<%- contentFor('secao1') %>
+
+<h1> Nick do CV que você quer abrir </h1>
+
+<%- contentFor('secao2') %>
+
+<form action="/cv" method="GET">
+  <div>
+  <!-- <div class="col-md-4"> -->
+    <!-- <label for="name" class="col-sm-6 control-label">Nome*</label> -->
+    <label for="name">Nome*</label>
+    <!-- <div class="col-sm-6"> -->
+    <div>
+        <!-- <select class="form-control" name="name" id="name"> -->
+        <select name="name" id="name">
+          <% for(i=0; i<disponiveisCV.length; i++) {%>
+            <% var selected = lastCv == disponiveisCV[i] ? 'selected' : ''; %>
+            <option value="<%= disponiveisCV[i] %>" <%= selected %>><%= disponiveisCV[i] %></option>
+          <% } %>          
+        </select>
+    </div>
+    <input type="submit" value="Abrir CV" onclick>
+  </div>
+  <!-- <select class="form-control" name="name" id="name"> -->
+</form> 

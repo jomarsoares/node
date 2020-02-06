@@ -1,0 +1,24 @@
+<html>
+<body>
+  <% if (arqdisp.item.length == 0) { %>
+      <div>
+          <h2>Não existem arquivos no servidor!</h2>
+      </div>
+  <% } else { %>
+    <form action="/del" method="GET">
+      <div>
+        <label for="name">Nome</label> 
+        <div>
+            <select name="name" id="name">
+              <% for(i=0; i < arqdisp.item.length; i++) {%>
+                  <option value="<%= arqdisp.item[i] %>"> <%= arqdisp.item[i] %></option>
+              <% } %>
+            </select>
+        </div>
+        <input type="submit" value="deletar Arquivo" onclick>
+      </div>
+    </form>
+  <% } %>
+  <p> <a href="http://localhost:3000/">Fazer upload de novos arquivos.</a> </p>
+</body> 
+</html>

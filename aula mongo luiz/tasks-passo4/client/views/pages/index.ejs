@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tasks</title>
+    </head>
+    <body>
+        <h1>Tasks</h1>
+        <ul>
+            <% content.tasks.forEach(function(task) { %>
+                <li><a href="/show/<%= task._id %>"><%= task.title %></a></li>
+            <% }) %>
+        </ul>
+        <br/>
+        <a href="/create"><button>Criar Task</button></a>
+    </body>
+</html>

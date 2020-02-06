@@ -1,0 +1,18 @@
+<html>
+<body>
+<form action="/confdel" method="GET">
+  <div>
+    <div>
+        <h2>Você está certo de eliminar o arquivo abaixo do servidor?</h2>
+        <h3> <%= arqdel %></h3>
+        <h2>Digite SIM em maiúsculo para confirmar.</h2>
+            <input type="hidden" name="name" value="<%= arqdel %>">
+            <input type="text" name="conf" value="NÃO">
+            <input type="submit" value="deletar Arquivo" onclick>
+    </div>
+  </div>
+  <p> <a href="http://localhost:3000/arqs">Listar arquivos do servidor.</a></p>
+  <p> <a href="http://localhost:3000/">Fazer upload de novos arquivos.</a> </p>
+</form>
+</body> 
+</html>

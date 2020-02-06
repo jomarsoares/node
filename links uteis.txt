@@ -1,0 +1,8 @@
+EJS com template (layout)
+http://tsdn.tecnospeed.com.br/blog-da-consultoria-tecnica-tecnospeed/post/utilizando-a-engine-ejs-para-aplicacoes-em-nodejs
+
+Autenticação (ainda não vi)
+http://tsdn.tecnospeed.com.br/blog-da-consultoria-tecnica-tecnospeed/post/autenticando-uma-api-em-nodejs-com-json-web-tokens
+
+http://tsdn.tecnospeed.com.br/blog-da-consultoria-tecnica-tecnospeed/post/autenticando-uma-api-em-nodejs-com-json-web-tokens
+

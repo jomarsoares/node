@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <% if (msg.arqeup !== "") { %>
+            <h2> Realizado o upload do arquivo <%= msg.arqeup %> ! </h2>
+            <h2> Foram gravados também no servidor os dados <%= msg.dados.campo1 %>, <%= msg.dados.campo2 %> e <%= msg.dados.campo3 %></h2>
+        <% } %>
+        
+        <p> <a href="http://localhost:3000/arqs">Listar arquivos do servidor.</a></p>
+        <p> <a href="http://localhost:3000/"">Fazer upload de novos arquivos.</a> </p>
+    </body> 
+</html>
